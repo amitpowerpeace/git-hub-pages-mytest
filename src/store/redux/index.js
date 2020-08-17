@@ -11,7 +11,7 @@ const useApiRequest = (endpoint, { method = "get", params = {} } = {}) => {
       const res = await fetch(endpoint, params, {
         method: `${method}`
       });
-      res.json().then((res) => dispatch(success(res)));
+      res && res.json().then((res) => dispatch(success(res)));
     } catch (e) {
       dispatch(error(e));
     }

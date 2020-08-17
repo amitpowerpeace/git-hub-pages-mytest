@@ -2,7 +2,7 @@ import { FETCHING, SUCCESS, ERROR } from "./actionTypes";
 
 export const initialState = {
   status: null,
-  response: null
+  response: null,
 };
 
 const reducer = (state = initialState, { type, response, exception } = {}) => {
@@ -14,10 +14,9 @@ const reducer = (state = initialState, { type, response, exception } = {}) => {
         response &&
         response.map((item, index) => {
           let productInStock = 0;
-          if (index === 1) {
-            productInStock = 0;
-          }
-          if (index === 2) {
+          if (index === 0) {
+            productInStock = "N/A";
+          } else if (index === 2) {
             productInStock = -1;
           } else {
             productInStock = 25;
@@ -29,7 +28,7 @@ const reducer = (state = initialState, { type, response, exception } = {}) => {
             instock: productInStock,
             inventory: "In Stock",
             type: "Gift Card",
-            vendor: "Fullfil test store"
+            vendor: "Fullfil test store",
           };
         });
       return { ...state, status: SUCCESS, response };

@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +10,23 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.container{
+padding: 10px;
+border: 1px solid #d3d3d3;
+border-radius: 5px;
+background: #ffffff;
+margin: 0px auto;
+display: flex;
+justify-content: center;
+align-items: center;
+      
+}
+.productFilter{
+  width: 100px;
+  height: 28px;
+  margin-right: 1px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +57,70 @@
   to {
     transform: rotate(360deg);
   }
+}
+.searchContainer{
+  width: 80%;
+  margin-bottom: 15px;
+  height: 30px;
+  position:relative;
+  padding:0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+.searchTerm{
+  height: 22px;
+    padding-left:30px;
+    width: 75%;
+    
+}
+.searchImg{
+  position:absolute;
+  bottom: 10px;
+  left: 109px;
+}
+.productCardWrapper{
+ 
+  
+} 
+
+   
+/*** Overrides for react-virtualized styles ***/
+.ReactVirtualized__Table__Grid {
+  background-color: white;
+  border-bottom: 1px solid #D3D3D3;
+  border-right: 1px solid #D3D3D3;
+}
+.ReactVirtualized__Table__headerColumn {
+  align-items: center;
+    border-right:1px solid #D3D3D3;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+
+    /* '&:last-child': {
+      border-right: none;
+  } */
+
+
+}
+.ReactVirtualized__Table__headerRow {
+  background-image: linear-gradient(#fff, #efefef);
+  border: 1px solid #D3D3D3;
+  padding-right: 0 !important;
+  font-size: small;
+}
+.ReactVirtualized__Table__row {
+  border-bottom:1px solid #D3D3D3;
+  border-left: 1px solid #D3D3D3;
+  font-size: small;
+}
+.ReactVirtualized__Table__rowColumn {
+  align-items: center;
+    border-right: 1px solid #D3D3D3;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+    font-size: small;
 }
